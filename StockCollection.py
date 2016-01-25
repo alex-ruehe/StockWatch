@@ -12,6 +12,7 @@ class StockCollection:
         parser.read(configfile)
         self.owner = parser['User']['name']
         self.mail = parser['User']['mail']
+        self.mail_from = parser['User']['sender']
         self.stock_symbols = {}
         self.stocks = []
 
