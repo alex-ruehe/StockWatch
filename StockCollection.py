@@ -88,7 +88,7 @@ class StockCollection:
     def send_mail(self, data):
         sendmail_location = "/usr/sbin/sendmail" # sendmail location
         p = os.popen("%s -t" % sendmail_location, "w")
-        p.write("From: %s\n" % self.mail)
+        p.write("From: <Stock Watch>%s\n" % self.mail)
         p.write("To: %s\n" % self.mail)
         p.write("Subject: Your weekly stock watch report\n")
         p.write("\n") # blank line separating headers from body
